@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ryan.cs399_calculatorr.MainActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="70sp"
+            android:gravity="left"
+            android:text="="/>
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:textSize="70sp"
+            android:gravity="right"
+            android:text="0"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button android:id="@+id/one"   android:text="1" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/two"   android:text="2" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/three" android:text="3" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/add"   android:text="+" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="opBtnClk"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button android:id="@+id/four"     android:text="4" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/five"     android:text="5" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/six"      android:text="6" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/subtract" android:text="-" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="opBtnClk"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button android:id="@+id/seven"    android:text="7" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/eight"    android:text="8" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/nine"     android:text="9" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/multiply" android:text="x" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="opBtnClk"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Button android:id="@+id/decimal" android:text="."   android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/zero"    android:text="0"   android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="numBtnClk"/>
+            <Button android:id="@+id/delete"  android:text="del" android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="delBtnClk"/>
+            <Button android:id="@+id/divide"  android:text="/"   android:layout_weight="1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="opBtnClk"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            <Space android:layout_height="fill_parent" android:layout_width="0px" android:layout_weight="1"/>
+            <Button android:id="@+id/clear"  android:text="clr" android:layout_weight="1" android:layout_width="0px" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="clrBtnClk"/>
+            <Button android:id="@+id/equals" android:text="="   android:layout_weight="1" android:layout_width="0px" android:layout_height="fill_parent" android:textSize="15sp" android:onClick="eqBtnClk"/>
+            <Space android:layout_height="fill_parent" android:layout_width="0px" android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</android.widget.LinearLayout>
