@@ -8,11 +8,10 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
-    int x = 2;
-
-    String firstNum;
-    String secondNum;
-    String currentOperator;
+    String firstNum = "0";
+    String secondNum = "0";
+    String currentOperator = "=";
+    boolean operationFinished = false;
 
     TextView ans;
     TextView op;
@@ -22,15 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        firstNum = "0";
-        secondNum = "0";
-        currentOperator = "=";
-
         ans = (TextView) findViewById(R.id.answer);
-        ans.setText("0");
-
         op = (TextView) findViewById(R.id.operator);
-        op.setText("=");
 
     }
 
@@ -40,7 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (currentOperator.equals("=")) {
             if (firstNum.contains(".") && numChar.equals(".")) { return; }
-            if (firstNum.equals("0")) { firstNum = numChar; }
+            if (firstNum.equals("0") || operationFinished) {
+                firstNum = numChar;
+                operationFinished = false;
+            }
             else { firstNum += numChar; }
             ans.setText(firstNum);
 
@@ -107,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 firstNum = "0";
                 secondNum = "0";
                 op.setText("=");
-                ans.setText("pls no... 0");
+                ans.setText("imdying 0");
                 return;
             }
             finalAnswer = firstVal / secondVal;
@@ -118,8 +113,11 @@ public class MainActivity extends AppCompatActivity {
 
         firstNum = Double.toString(finalAnswer);
         secondNum = "0";
+        operationFinished = true;
 
+        currentOperator = "=";
         op.setText("=");
+
         ans.setText(Double.toString(finalAnswer));
     }
 }
