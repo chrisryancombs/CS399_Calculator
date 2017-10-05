@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     String secondNum = "0";
     String currentOperator = "=";
     boolean operationFinished = false;
+    boolean currentlydying = false;
 
     TextView ans;
     TextView op;
@@ -102,13 +103,20 @@ public class MainActivity extends AppCompatActivity {
                 firstNum = "0";
                 secondNum = "0";
                 op.setText("=");
-                ans.setText("imdying 0");
+                if (!currentlydying) {
+                    ans.setText("imdying 0");
+                    currentlydying = true;
+                }
+                else {
+                    ans.setText("plsdont 0");
+                    currentlydying = false;
+                }
                 return;
             }
             finalAnswer = firstVal / secondVal;
         }
         else {
-            finalAnswer = 666.666;
+            return;
         }
 
         firstNum = Double.toString(finalAnswer);
